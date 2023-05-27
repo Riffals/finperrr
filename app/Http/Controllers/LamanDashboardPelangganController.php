@@ -18,13 +18,15 @@ class LamanDashboardPelangganController extends Controller
 
     public function index(Request $request)
     {
+        $newName = '';
+
 		// menangkap data pencarian
 		$keyword = $request->keyword;
  
         // mengambil data dari table pegawai  sesuai pencarian data
 		$pelanggan = DB::table('mitra')
 		    ->where('lokasi_mitra','like',"%".$keyword."%")
-            ->get();
+            ->paginate(12);
  
         // mengirim data pegawai ke view index
 		return view('dashboard_pelanggan',['pelangganList' => $pelanggan]);

@@ -10,5 +10,8 @@ class LamanDashboardPelanggan extends Model
     use HasFactory;
 
     // protected $table = 'mitra';
+    // protected $fillable = [
+    //     'gambar'
+    // ];
 
 }

@@ -36,8 +36,15 @@
     <div class="grid grid-cols-6 gap-4 p-8">
         {{-- isi 1 --}}
         @foreach ($pelangganList as $cust)
+        {{-- {{ $cust->gambar }} --}}
         <div class="max-w-xs flex flex-col items-center justify-center gap-8 rounded-3xl shadow-2xl p-4 py-8 bg-white">
-            <img src="{{ ('img/mitra_1.png') }}" alt="" class="object-cover object-center w-36 rounded-full ">
+            {{-- <img src="{{ ('img/mitra_1.png') }}" alt="" class="object-cover object-center w-36 rounded-full "> --}}
+                {{-- tampilin gambar --}}
+                @if ($cust->gambar != '')
+                    <img src="{{ asset('storage/uploads/'.$cust->gambar.'.png') }}" alt="00100" class= "object-cover object-center w-36 rounded-full">
+                @else
+                    <img src="{{ asset('foto-profil-gabut.jpg') }}" alt="00200" class= "object-cover object-center w-36 rounded-full">
+                @endif
             <h2 class="text-2xl font-semibold tracking-wide">{{ $cust->nama_mitra }}</h2>
             <div class="p-2 bg-gray-200 rounded-md">
                 <div class="flex items-center justify-between gap-2">
@@ -76,6 +83,10 @@
         </div>
         @endforeach
     </div>
+
+    <div class="my-5">
+        {{ $pelangganList->withQueryString()->links() }}
+      </div>
 
 
     {{-- card_2 --}}
