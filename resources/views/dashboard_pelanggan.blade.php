@@ -33,7 +33,8 @@
 
     {{-- Yodi --}}
     {{-- card_1 --}}
-    <div class="grid grid-cols-6 gap-4 p-8">
+        {{-- <div class="flex flex-cols-6 flex-wrap gap-4 p-8"> --}}
+        <div class="grid grid-cols-6 gap-4 p-8">
         {{-- isi 1 --}}
         @foreach ($pelangganList as $cust)
         {{-- {{ $cust->gambar }} --}}

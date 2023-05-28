@@ -68,16 +68,18 @@
     <br><br><br>
 
     <style>
-            #hl{
-              margin-top: 1.2em;
-              text-align: center;
-              font-family: 'Poppins';
-              font-weight: bold;
-              font-size: 5em;
-              color: #FFFF;
-              position: relative;
-              z-index: 2;
-            }
+
+          @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Poppins:wght@700&display=swap');
+          #hl{
+            margin-top: 1.2em;
+            text-align: center;
+            font-family: 'Poppins';
+            font-weight: bold;
+            font-size: 5em;
+            color: #FFFF;
+            position: relative;
+            z-index: 2;
+          }
 
           #bunk{
             /* harus absolute */
@@ -120,6 +122,7 @@
             z-index: 1;
 		    } */
 
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
          .btn-custom {
           font-family: 'open sans';
           font-weight: bold;
@@ -188,7 +191,8 @@
             color: #000;
             font-family: 'open sans';
             font-weight: bold;
-            font-size: 46px;
+            /* font-size: 40px; */
+            font-size: 42px;
             line-height: 1.2;
             text-align: start;
             margin-left: 5%;
@@ -200,7 +204,8 @@
             font-family: 'open sans';
             font-weight: bold;
             /* font-size: 38px; */
-            font-size: 46px;
+            /* font-size: 46px; */
+            font-size: 42px;
             line-height: 1.2;
             text-align: end;
             margin-left: 6%;
