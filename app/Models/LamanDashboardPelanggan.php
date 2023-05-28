@@ -14,4 +14,6 @@ class LamanDashboardPelanggan extends Model
     //     'gambar'
     // ];
 
+    public $sortable = ['gaji'];
+
 }
