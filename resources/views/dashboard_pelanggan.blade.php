@@ -84,9 +84,9 @@
         @endforeach
     </div>
 
-    <div class="my-5">
+    {{-- <div class="my-5">
         {{ $pelangganList->withQueryString()->links() }}
-      </div>
+      </div> --}}
 
 
     {{-- card_2 --}}
