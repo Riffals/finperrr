@@ -12,7 +12,7 @@
                 <div class="card-body">
                     <img src="images/icon-formulir.png" style="width:13%; margin-top: 15px;margin-bottom:15px">
 
-                    <p class="card-title" style="color: white; font-size:20px"><b>Tawaran Kontrak</b></p>
+                    <p class="card-title" style="color: green; font-size:20px"><b>Tawaran Kontrak</b></p>
 
                     <div class="card" style="color:#b6b4b4; height:50px; width:230px;  margin-top:15px; margin-bottom:15px; border-radius:60px">
                         <a href="/tawarankontrak">
