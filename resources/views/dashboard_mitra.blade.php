@@ -2,7 +2,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
 
-@section('title', 'Dashboard_Pelanggan(3)')
+@section('title', 'Dashboard_Mitra')
 
 @section('content')
 <div class="container-fluid">
