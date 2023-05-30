@@ -1,4 +1,11 @@
 @extends('layouts.mainlayout_4')
+<style>
+  /* poppins */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+  /* opensans */
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+  /* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap'); */
+</style>
 
 @section('title', 'Bergabung_Sebagai(4)')
 
@@ -45,9 +52,9 @@
       </div>
       <div class="oren" style="flex-grow: 3">
         <p></p>
-        <p class="tulisan_1"><span style="color:#FFFFFF;font-weight:bold;">Mitra</span> yang akan ditawarkan pada website kami harus jujur, disiplin, bertanggung jawab dengan pekerjaannya dan dapat dipercaya.</p>
+        <p class="tulisan_1"><span style="color:#FFFFFF;font-size: 46px;">Mitra</span> yang akan ditawarkan pada website kami harus jujur, disiplin, bertanggung jawab dengan pekerjaannya dan dapat dipercaya.</p>
         <br>
-        <p class="tulisan_1">Segala hak <span style="color:#FFFFFF;font-weight:bold;">Mitra</span> <span style="color:#135589;font-weight:bold;">PASTI DIJAMIN</span> oleh hukum yang berlaku di Indonesia</p>
+        <p class="tulisan_1">Segala hak <span style="color:#FFFFFF;font-size: 46px;">Mitra</span> <span style="color:#135589;font-size: 46px;">PASTI DIJAMIN</span> oleh hukum yang berlaku di Indonesia</p>
       </div>
     </div> 
 
@@ -56,9 +63,9 @@
     <div class="flex_2" class="flex-container">
       <div class="oren" style="flex-grow: 3 marg">
         <p></p>
-        <p class="tulisan_2">Pada website ini <span style="color:#FFFFFF;font-weight:bold;">kenyamanan </span>dari pelanggan pasti tejamin. Ayo mulai cari Mitra yang cocok dengan kriteria mu!</p>
+        <p class="tulisan_2">Pada website ini <span style="color:#FFFFFF;font-size: 46px;">kenyamanan </span>dari pelanggan pasti tejamin. Ayo mulai cari Mitra yang cocok dengan kriteria mu!</p>
         <br>
-        <p class="tulisan_2"><span style="color:#FFFFFF;font-weight:bold;">Jadilah pelanggan yang bijaksana </span>dalam mempekerjakan Mitra!</p>
+        <p class="tulisan_2"><span style="color:#FFFFFF;font-size: 46px;">Jadilah pelanggan yang bijaksana </span>dalam mempekerjakan Mitra!</p>
       </div>
       <div class="biru" style="flex-grow: 1">
         <img src="{{ ('img/teacher.png') }}" alt="Maid">
@@ -188,7 +195,7 @@
             color: #000;
             font-family: 'open sans';
             font-weight: bold;
-            font-size: 46px;
+            font-size: 44px;
             line-height: 1.2;
             text-align: start;
             margin-left: 5%;
@@ -200,7 +207,7 @@
             font-family: 'open sans';
             font-weight: bold;
             /* font-size: 38px; */
-            font-size: 46px;
+            font-size: 44px;
             line-height: 1.2;
             text-align: end;
             margin-left: 6%;
