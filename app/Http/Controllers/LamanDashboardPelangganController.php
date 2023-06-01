@@ -9,24 +9,64 @@ use Illuminate\Support\Facades\DB;
 // use App\Models\LamanDashboardPelanggan;
 
 // ASLI
+// class LamanDashboardPelangganController extends Controller
+// {
+
+//     public function index(Request $request)
+//     {
+//         // Menangkap data pencarian
+//         $keyword = $request->keyword;
+    
+//         // Mengambil data dari table mitra 
+//         $query = DB::table('mitra');
+    
+//         // Melakukan pencarian data
+//         if ($request->has('keyword')) {
+//             $query->where('lokasi_mitra', 'like', "%" . $keyword . "%");
+//         }
+        
+//         // mengurutkannya berdasarkan kolom 'gaji'       
+    
+//         // Mengurutkan data jika tombol "asc" ditekan
+//         if ($request->has('asc')) {
+//             $query->orderBy('gaji');
+//         }
+    
+//         // Mengurutkan data jika tombol "desc" ditekan
+//         if ($request->has('desc')) {
+//             $query->orderBy('gaji', 'desc');
+//         }
+    
+//         $pelanggan = $query->paginate(12);
+
+//         // Menambahkan parameter ke tautan paginasi
+//         $pelanggan->appends([
+//             'keyword' => $keyword
+//         ]);
+    
+//         // Mengirim data pegawai ke view index
+//         return view('dashboard_pelanggan', [
+//             'pelangganList' => $pelanggan
+//         ]);
+//     }
+// }
+
+// GPT 
 class LamanDashboardPelangganController extends Controller
 {
-
     public function index(Request $request)
     {
         // Menangkap data pencarian
-        $keyword = $request->keyword;
-    
-        // Mengambil data dari table mitra 
+        $keyword = $request->input('keyword');
+
+        // Mengambil data dari tabel 'mitra'
         $query = DB::table('mitra');
-    
+
         // Melakukan pencarian data
-        if ($request->has('keyword')) {
-            $query->where('lokasi_mitra', 'like', "%" . $keyword . "%");
+        if ($keyword) {
+            $query->where('lokasi_mitra', 'like', '%' . $keyword . '%');
         }
         
-        // mengurutkannya berdasarkan kolom 'gaji'
-    
         // Mengurutkan data jika tombol "asc" ditekan
         if ($request->has('asc')) {
             $query->orderBy('gaji');
@@ -36,10 +76,13 @@ class LamanDashboardPelangganController extends Controller
         if ($request->has('desc')) {
             $query->orderBy('gaji', 'desc');
         }
-    
+
         $pelanggan = $query->paginate(12);
-    
-        // Mengirim data pegawai ke view index
+
+        // Menambahkan parameter pencarian ke tautan paginasi
+        // $pelanggan->appends(['keyword' => $keyword]);
+
+        // Mengirim data pelanggan ke view dashboard_pelanggan
         return view('dashboard_pelanggan', [
             'pelangganList' => $pelanggan
         ]);

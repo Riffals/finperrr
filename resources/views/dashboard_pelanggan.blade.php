@@ -87,8 +87,8 @@
     </div>
 
     <div class="my-5">
-        {{ $pelangganList->links() }}
-        {{-- {{ $pelangganList->links() }} --}}
+        {{-- {{ $pelangganList->links()->appends(['keyword' => $keyword, 'desc' => $desc, 'asc' => $asc]) }} --}}
+        {{ $pelangganList->appends($_GET)->links() }}
       </div>
 
 
