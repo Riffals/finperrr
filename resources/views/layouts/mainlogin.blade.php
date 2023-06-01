@@ -12,19 +12,15 @@
 
     {{-- nav --}}
     <form action="{{url('profil/store')}}" method="post">
-    @csrf
-    <body className='snippet-body'>
-        <nav class="navbar navbar-inverse">
-        <div class="navbar-logo">
-            <a href="/">
+        @csrf
+
+        <body className='snippet-body'>
+            <nav class="navbar navbar-inverse">
+                <div class="navbar-logo">
                 <img src="{{ ('img/logo_finper.png') }}" alt="Logo">
-            </a>
-        </div>
-        {{-- <div class="navbar-icon"> --}}
-        {{-- <img src="{{ ('img/icon _bell_.png') }}" alt="Notification"> --}}
-        {{-- <img src="{{ ('img/Rectangle (1).png') }}" alt="Profile">
-        </div> --}}
-        </nav>
+                </div>
+            </nav>
+            <div class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-[#E88A33] text-sm py-8"></div>
     </form>
 
     {{-- <div class="container"> --}}
@@ -39,19 +35,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+<div class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-[#E88A33] text-sm py-8"></div>
 
 <style>
-        body {
-            background: rgb(230, 230, 230, .9)
-        }
-
-        .navbar {
+    .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 10px;
             background-color: #135589;
             color: #fff;
+            position: relative;
+            z-index: 2;
         }
 
         .navbar-logo {
@@ -62,22 +57,11 @@
             height: 40px;
         }
 
-        .navbar-icon {
-            display: flex;
-            align-items: center;
-        }
-
-        .navbar-icon img {
-            height: 25px;
-            margin: 0 10px;
-            cursor: pointer;
-        }
-
         .navbar-inverse{
         background-color:  #135589;
-        box-shadow:0px 5px 5px rgb(0, 0, 0, .55);
+        /* box-shadow:0px 5px 5px rgb(0, 0, 0, .55); */
         /* position: relative; */
         z-index: 2;
     }
-</style>
+    </style>
 </html>

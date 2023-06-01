@@ -14,6 +14,13 @@ class LamanDashboardPelanggan extends Model
     //     'gambar'
     // ];
 
-    public $sortable = ['gaji'];
+// <<<<<<< com_6
+    // protected $fillable = ['nama_mitra', 'gaji', 'lokasi_mitra'];
+
+    // protected $appends = ['nama_mitra', 'gaji', 'lokasi_mitra'];
+
+// =======
+//     public $sortable = ['gaji'];
+// >>>>>>> master
 
 }

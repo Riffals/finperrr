@@ -26,4 +26,5 @@ use App\Http\Controllers\LamanDashboardPelangganController;
 
 // Route::view('/', 'bergabung_sebagai');
 // Route::view('/', 'dashboard_pelanggan');
+// Route::view('/', 'laman_masuk');
 Route::get('/', [LamanDashboardPelangganController::class, 'index']);
