@@ -16,7 +16,7 @@ class LamanDashboardPelanggan extends Model
 
     // protected $fillable = ['nama_mitra', 'gaji', 'lokasi_mitra'];
 
-    protected $appends = ['nama_mitra', 'gaji', 'lokasi_mitra'];
+    // protected $appends = ['nama_mitra', 'gaji', 'lokasi_mitra'];
 
 
 }

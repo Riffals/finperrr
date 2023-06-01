@@ -13,7 +13,6 @@
     {{-- nav --}}
     <form action="{{url('profil/store')}}" method="post">
     @csrf
-
     <body className='snippet-body'>
         <nav class="navbar navbar-inverse">
         <div class="navbar-logo">
@@ -21,10 +20,10 @@
                 <img src="{{ ('img/logo_finper.png') }}" alt="Logo">
             </a>
         </div>
-        <div class="navbar-icon">
-        <img src="{{ ('img/icon _bell_.png') }}" alt="Notification">
-        <img src="{{ ('img/Rectangle (1).png') }}" alt="Profile">
-        </div>
+        {{-- <div class="navbar-icon"> --}}
+        {{-- <img src="{{ ('img/icon _bell_.png') }}" alt="Notification"> --}}
+        {{-- <img src="{{ ('img/Rectangle (1).png') }}" alt="Profile">
+        </div> --}}
         </nav>
     </form>
 
