@@ -1,9 +1,11 @@
 @extends('layouts.mainlayout_4')
 <style>
   /* poppins */
-  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+  @import url("https://fonts.googleapis.com/css?family=Poppins:400,600,800,500,700");
+  /* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
   /* opensans */
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,800,500,700&display=swap');
+  /* @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'); */
   /* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap'); */
 </style>
 
@@ -27,7 +29,7 @@
       <div class="gambar_mitra">
         <P></P>
         <form name="formulir" action="kirim.php" method="POST">
-          <input type="image" src="{{ ('img/Sapu(Mitra).png') }}" alt="Sapu" width="70%" height="70%">
+          <input type="image" src="{{ ('img/Sapu(Mitra).png') }}" alt="Sapu" width="70%" height="55%">
         </form>
         <!-- <img src="/Sapu(Mitra).png" alt=""> -->
         <P></P>
@@ -36,7 +38,7 @@
       <div class="gambar_pelanggan">
         <p></p>
         <form name="formulir" action="kirim.php" method="POST">
-          <input type="image" src="{{ ('img/Rumah(Pelanggan).png') }}" alt="Rumah" width="70%" height="70%">
+          <input type="image" src="{{ ('img/Rumah(Pelanggan).png') }}" alt="Rumah" width="70%" height="55%">
         </form>
         <!-- <img src="/Rumah(Pelanggan).png" alt=""> -->
         <P></P>
@@ -52,9 +54,9 @@
       </div>
       <div class="oren" style="flex-grow: 3">
         <p></p>
-        <p class="tulisan_1"><span style="color:#FFFFFF;font-size: 46px;">Mitra</span> yang akan ditawarkan pada website kami harus jujur, disiplin, bertanggung jawab dengan pekerjaannya dan dapat dipercaya.</p>
+        <p class="tulisan_1"><strong style="color:#FFFFFF;font-weight:700">Mitra</strong> yang akan ditawarkan pada website kami harus jujur, disiplin, bertanggung jawab dengan pekerjaannya dan dapat dipercaya.</p>
         <br>
-        <p class="tulisan_1">Segala hak <span style="color:#FFFFFF;font-size: 46px;">Mitra</span> <span style="color:#135589;font-size: 46px;">PASTI DIJAMIN</span> oleh hukum yang berlaku di Indonesia</p>
+        <p class="tulisan_1">Segala hak <span style="color:#FFFFFF;font-weight:700">Mitra</span><span style="color:#135589;font-weight:700">PASTI DIJAMIN</span> oleh hukum yang berlaku di Indonesia</p>
       </div>
     </div> 
 
@@ -63,9 +65,9 @@
     <div class="flex_2" class="flex-container">
       <div class="oren" style="flex-grow: 3 marg">
         <p></p>
-        <p class="tulisan_2">Pada website ini <span style="color:#FFFFFF;font-size: 46px;">kenyamanan </span>dari pelanggan pasti tejamin. Ayo mulai cari Mitra yang cocok dengan kriteria mu!</p>
+        <p class="tulisan_2">Pada website ini <span style="color:#FFFFFF;font-weight:700">kenyamanan </span>dari pelanggan pasti tejamin. Ayo mulai cari Mitra yang cocok dengan kriteria mu!</p>
         <br>
-        <p class="tulisan_2"><span style="color:#FFFFFF;font-size: 46px;">Jadilah pelanggan yang bijaksana </span>dalam mempekerjakan Mitra!</p>
+        <p class="tulisan_2"><span style="color:#FFFFFF;font-weight:700">Jadilah pelanggan yang bijaksana </span>dalam mempekerjakan Mitra!</p>
       </div>
       <div class="biru" style="flex-grow: 1">
         <img src="{{ ('img/teacher.png') }}" alt="Maid">
@@ -79,7 +81,7 @@
               margin-top: 1.2em;
               text-align: center;
               font-family: 'Poppins';
-              font-weight: bold;
+              font-weight: 700;
               font-size: 5em;
               color: #FFFF;
               position: relative;
@@ -194,7 +196,7 @@
           .tulisan_1{
             color: #000;
             font-family: 'open sans';
-            font-weight: bold;
+            font-weight: 600;
             font-size: 44px;
             line-height: 1.2;
             text-align: start;
@@ -205,7 +207,7 @@
           .tulisan_2{
             color: #000;
             font-family: 'open sans';
-            font-weight: bold;
+            font-weight: 600;
             /* font-size: 38px; */
             font-size: 44px;
             line-height: 1.2;

@@ -39,11 +39,11 @@
         {{-- isi 1 --}}
         @foreach ($pelangganList as $cust)
         {{-- {{ $cust->gambar }} --}}
-        <div class="max-w-xs flex flex-col items-center justify-center gap-8 rounded-3xl shadow-2xl p-4 py-8 bg-white">
+        <div id="card" class="max-w-xs flex flex-col items-center justify-center gap-8 rounded-3xl shadow-2xl p-4 py-8 bg-white">
             {{-- <img src="{{ ('img/mitra_1.png') }}" alt="" class="object-cover object-center w-36 rounded-full "> --}}
                 {{-- tampilin gambar --}}
-                @if ($cust->gambar != '')
-                    <img src="{{ asset('img/'.$cust->gambar.'.png') }}" alt="00100" class= "object-cover object-center w-36 rounded-full">
+                @if ($cust->ppMitra != '')
+                    <img src="{{ asset('img/'.$cust->ppMitra.'.png') }}" alt="00100" class= "object-cover object-center w-36 rounded-full">
                 @else
                     <img src="{{ asset('foto-profil-gabut.jpg') }}" alt="00200" class= "object-cover object-center w-36 rounded-full">
                 @endif
@@ -72,7 +72,7 @@
                     </div>
                 </div>
             </div>
-            <button type="button"
+            <button id="tombolcard" type="button"
                 class="rounded-3xl flex items-center justify-center gap-4 px-4 py-2 bg-sky-800 text-gray-100">
                 Selengkapnya
                 <svg width="16" height="18" viewBox="-1 -1 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -96,13 +96,14 @@
 
     {{-- yodi --}}
 
-    {{-- <style>
-        #searcfil {
-            margin: 3% 0% 0% 5%;
-            width: 30%;
+    <style>
+        #card{
+            font-family: 'Poppins';
         }
-
-    </style> --}}
+        #tombolcard{
+            font-weight: 700;
+        }
+    </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
 
 @endsection
