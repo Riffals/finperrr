@@ -50,14 +50,14 @@ class SesiController extends Controller
             }
         } 
         else    {
-            return redirect('')->withErrors('Username dan password yang dimasukkan tidak sesuai')->withInput();
+            return redirect('/login')->withErrors('Username dan password yang dimasukkan tidak sesuai')->withInput();
         }
     }
 
     public function logout()
     {
         Auth::logout();
-        return redirect('');
+        return redirect('/login');
     }
 
     // asli
@@ -93,7 +93,7 @@ class SesiController extends Controller
         
         ListAkun::create($user);
 
-        return redirect('/')->with('Success', 'Selamat Register Berhasil!!!');
+        return redirect('/login')->with('Success', 'Selamat Register Berhasil!!!');
     }
 
     public function reset()
@@ -117,7 +117,7 @@ class SesiController extends Controller
         $user->password = Hash::make($request->password);
         $user->save();
     
-        return redirect('/')->with('Success', 'Password berhasil diganti');
+        return redirect('/login')->with('Success', 'Password berhasil diganti');
         // // return 123;
         // $request->validate([
         //     'email' => 'required|email',
