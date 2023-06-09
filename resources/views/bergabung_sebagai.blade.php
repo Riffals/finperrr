@@ -28,21 +28,29 @@
     <div id="flex_1" class="flex-container">
       <div class="gambar_mitra">
         <P></P>
-        <form name="formulir" action="kirim.php" method="POST">
+        {{-- <form name="formulir" action="kirim.php" method="POST"> --}}
+          <a href="/registers">
           <input type="image" src="{{ ('img/Sapu(Mitra).png') }}" alt="Sapu" width="70%" height="55%">
-        </form>
+          </a>
+        {{-- </form> --}}
         <!-- <img src="/Sapu(Mitra).png" alt=""> -->
         <P></P>
-        <button type="button" class="btn btn-mg btn-custom">Mitra</button>
+        <a href="/registers">
+          <button type="button" class="btn btn-mg btn-custom">Mitra</button>
+        </a>
       </div>
       <div class="gambar_pelanggan">
         <p></p>
-        <form name="formulir" action="kirim.php" method="POST">
-          <input type="image" src="{{ ('img/Rumah(Pelanggan).png') }}" alt="Rumah" width="70%" height="55%">
-        </form>
+        {{-- <form name="formulir" action="kirim.php" method="POST"> --}}
+          <a href="/registers">
+            <input type="image" src="{{ ('img/Rumah(Pelanggan).png') }}" alt="Rumah" width="70%" height="55%">
+          </a>
+        {{-- </form> --}}
         <!-- <img src="/Rumah(Pelanggan).png" alt=""> -->
         <P></P>
-        <button type="button" class="btn btn-mg btn-custom">Pelanggan</button>
+        <a href="/registers">
+          <button type="button" class="btn btn-mg btn-custom">Pelanggan</button>
+        </a>
       </div>
     </div>
 
@@ -136,7 +144,7 @@
           border-radius: 40px ;
           color: #ffff; 
           background-color: rgb(19, 85, 137, .92);
-          margin: auto auto auto; 
+          margin: 2rem auto auto; 
           /* border-color: #E51DF0;  */
           } 
 

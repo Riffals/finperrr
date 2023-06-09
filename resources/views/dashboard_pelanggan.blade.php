@@ -6,6 +6,15 @@
 
 @section('content')
 
+@if (isset($errorMessage) && !empty($pelangganList) && $pelangganList->isEmpty())
+    <script>
+        // Menampilkan pesan error dalam pop-up
+        window.onload = function() {
+            alert("{{ $errorMessage }}");
+        };
+    </script>
+@endif
+
     {{-- Searbar + filter --}}
     <form action="" method="GET">  
     <div class="flex w-2/5 mx-8 my-10">

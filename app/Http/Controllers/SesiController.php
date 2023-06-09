@@ -12,21 +12,28 @@ use Illuminate\Support\Facades\Password;
 
 class SesiController extends Controller
 {
-    public function index()
+    public function landing_page()
+    {
+        return view('landing_page');
+    }
+
+    public function login()
     {
         return view('laman_masuk');
     }
 
-    public function login(Request $request)
+    public function masuk(Request $request)
     {
 
         $request->validate([
             'email' => 'required',
             'password' => 'required',
-        ],[
-            'email.required' => 'Email WAJIB diisi', 
-            'password.required' => 'Password WAJIB diisi', 
-        ]);
+        ],
+        // [
+        //     'email.required' => 'Email WAJIB diisi', 
+        //     'password.required' => 'Password WAJIB diisi', 
+        // ]
+        );
 
         $infologin = [
             'email' => $request->email,
@@ -54,9 +61,13 @@ class SesiController extends Controller
     }
 
     // asli
-    public function register()
+    public function bergseb()
     {
+        return view('bergabung_sebagai');
+    }
 
+    public function registers()
+    {
         // Mengambil data dari tabel 'mitra'
         $tipeAkun = DB::table('akuns')
                 ->get();
@@ -73,6 +84,9 @@ class SesiController extends Controller
             'email' => 'required|min:5|unique:listakuns|max:255',
             'password' => 'required|min:3|max:255',
             'akunID' => 'required',
+        ],
+        [
+            'akunID.required' => 'sebagai field is required',
         ]);
 
         $user['password'] = bcrypt($user['password']);

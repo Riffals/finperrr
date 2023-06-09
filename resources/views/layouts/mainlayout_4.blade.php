@@ -11,13 +11,15 @@
 <body>
 
     {{-- nav --}}
-    <form action="{{url('profil/store')}}" method="post">
+    <form action=" " method="post">
         @csrf
 
         <body className='snippet-body'>
             <nav class="navbar navbar-inverse">
                 <div class="navbar-logo">
-                <img src="{{ ('img/logo_finper.png') }}" alt="Logo">
+                    <a href="/login">
+                        <img src="{{ ('img/logo_finper.png') }}" alt="Logo">
+                    </a>
                 </div>
             </nav>
     </form>

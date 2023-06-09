@@ -1,28 +1,8 @@
-<!doctype html>
-<html>
+@extends('layouts.main_guest')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Laravel 9 | LOGIN</title>
-    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
+@section('title', 'LOGIN(4)')
 
-</head>
-
-<body>
-      {{-- nav --}}
-        <form action="" method="post">
-        @csrf
-        <body className='snippet-body'>
-            <nav class="navbar navbar-inverse">
-                <div class="navbar-logo">
-                <a href="/">
-                    <img src="{{ ('img/logo_finper.png') }}" alt="Logo">
-                </a>
-                </div>
-            </nav>
-        </form>
+@section('content')
     {{-- Yodi --}}
     <div class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-[#E88A33] text-sm py-8">
     </div>
@@ -80,12 +60,6 @@
                         <label for="floating_first_name"
                             class="peer-focus:font-medium absolute text-sm text-red-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-red-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Password</label>
                     </div>
-                    {{-- <div class="flex items-start mb-6">
-                        <label id="daftar" for="terms" class="ml-2 text-sm font-medium text-gray-900 dark:text-black">Tidak memiliki akun? <a
-                                id="d700" href="/register" class="text-blue-600 hover:underline dark:text-blue-500">Daftar
-                            </a></label>
-                    </div> --}}
-
                     <div class="flex items-start justify-between mb-6">
                         <label id="daftar" for="terms" class="ml-2 text-sm font-medium text-gray-900 dark:text-black">Tidak memiliki akun? <a
                                 id="d700" href="/register" class="text-blue-600 hover:underline dark:text-blue-500">Daftar</a></label>
@@ -115,14 +89,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
 
-<style>
+    <style>
     /* poppins */
     @import url("https://fonts.googleapis.com/css?family=Poppins:400,600,800,500,700");
+    /* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
     /* opensans */
     @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,800,500,700&display=swap');
-
+    /* @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'); */
+    /* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap'); */
     #judul{
         font-family: 'poppins';
     }
@@ -145,31 +120,6 @@
         font-weight: 700;
     }
 
-  .navbar {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 10px;
-          background-color: #135589;
-          color: #fff;
-          position: relative;
-          z-index: 2;
-      }
+    </style>
 
-      .navbar-logo {
-          margin-right: auto;
-      }
-
-      .navbar-logo img {
-          height: 40px;
-      }
-
-      .navbar-inverse{
-      background-color:  #135589;
-      /* box-shadow:0px 5px 5px rgb(0, 0, 0, .55); */
-      /* position: relative; */
-      z-index: 2;
-  }
-  </style>
-
-</html>
+@endsection

@@ -17,59 +17,34 @@ use App\Http\Controllers\LamanDashboardPelangganController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-// Route::get('/students', [StudentController::class, 'index']);
-
-// Route::get('/', function () {
-//     return view('login_kresna');
-// });
-
-// Route::view('/', 'bergabung_sebagai');
-// Route::view('/', 'dashboard_pelanggan');
-// Route::view('/', 'laman_masuk');
-// Route::view('/', 'laman_daftar');
-// Route::view('/', 'landing_page');
-// Route::get('/', [LamanDashboardPelangganController::class, 'index']);
-
-// Route::view('/', 'laman_masuk');
-
 // garap
 Route::middleware(['guest'])->group(function()  {
-    // Route::get('/', [SesiController::class, 'index'])->name('login');
-    // Route::get('/', [SesiController::class, 'index']);
-    // Route::post('/', [SesiController::class, 'login']);
-    // // register
-    // Route::get('/register', [SesiController::class, 'register']);
-    // Route::get('/create', [SesiController::class, 'create']);
+    // Landing page
+    Route::get('/', [SesiController::class, 'landing_page'])->name('landing_page');
 
     // Login
-    Route::get('/', [SesiController::class, 'index'])->name('login');
-    Route::post('/', [SesiController::class, 'login']);
+    Route::get('/login', [SesiController::class, 'login'])->name('login');
+    Route::post('/login', [SesiController::class, 'masuk']);
 
     // Register
-    Route::get('/register', [SesiController::class, 'register'])->name('register');
-    Route::post('/register', [SesiController::class, 'create'])->name('create');
+    Route::get('/register', [SesiController::class, 'bergseb'])->name('bergseb');
+    Route::get('/registers', [SesiController::class, 'registers'])->name('registers');
+    Route::post('/registers', [SesiController::class, 'create'])->name('create');
     
     // Reset password
     Route::get('/reset-password', [SesiController::class, 'reset'])->name('reset');
     Route::post('/reset-password', [SesiController::class, 'update'])->name('update');
-    // Route::get('/reset-password', [SesiController::class, 'reset'])->name('password.reset');
-    // Route::post('/reset-password', [SesiController::class, 'update'])->name('password.update');
 });
 
 Route::get('/home', function(){
     return redirect('/admin');
 });
  
-// akunID 1=admin, 2=mitra, 3=pelanggan
+// akunID 1=admin, 2=pelanggan, 3=mitra
 Route::middleware(['auth'])->group(function()  {
     Route::get('/admin', [AdminController::class, 'index']);
 
     Route::get('/admin/admin', [AdminController::class, 'admin'])->middleware('userAkses:1');
-    // Route::get('/admin/admin/{optional?}', [AdminController::class, 'admin'])->middleware('userAkses:1');
 
     Route::get('/admin/pelanggan', [AdminController::class, 'pelanggan'])->middleware('userAkses:2');
     Route::get('/admin/pelanggan/dashpel', [LamanDashboardPelangganController::class, 'index'])->middleware('userAkses:2');
