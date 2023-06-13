@@ -50,14 +50,14 @@ class SesiController extends Controller
             }
         } 
         else    {
-            return redirect('')->withErrors('Username dan password yang dimasukkan tidak sesuai')->withInput();
+            return redirect('/login')->withErrors('Username dan password yang dimasukkan tidak sesuai')->withInput();
         }
     }
 
     public function logout()
     {
         Auth::logout();
-        return redirect('');
+        return redirect('/login');
     }
 
     // asli
@@ -93,7 +93,7 @@ class SesiController extends Controller
         
         ListAkun::create($user);
 
-        return redirect('/')->with('Success', 'Selamat Register Berhasil!!!');
+        return redirect('/login')->with('Success', 'Selamat Register Berhasil!!!');
     }
 
     public function reset()
@@ -103,37 +103,40 @@ class SesiController extends Controller
 
     public function update(Request $request)
     {
-        $request->validate([
-            'email' => 'required|email',
-            'password' => 'required|min:3|max:255|confirmed',
-        ]);
-    
-        $user = ListAkun::where('email', $request->email)->first();
-    
-        if (!$user) {
-            return redirect()->back()->withErrors(['email' => 'Email tidak ditemukan']);
-        }
-    
-        $user->password = Hash::make($request->password);
-        $user->save();
-    
-        return redirect('/')->with('Success', 'Password berhasil diganti');
-        // // return 123;
+        // return view('dashboard_pelanggan', [
+        //     'pelangganList' => $pelanggan,
+        // ])
         // $request->validate([
         //     'email' => 'required|email',
-        //     'password' => 'required|min:8|confirmed',
+        //     'password' => 'required|min:3|max:255|confirmed',
         // ]);
-
+    
         // $user = ListAkun::where('email', $request->email)->first();
-
+    
         // if (!$user) {
         //     return redirect()->back()->withErrors(['email' => 'Email tidak ditemukan']);
         // }
-
+    
         // $user->password = Hash::make($request->password);
         // $user->save();
+    
+        // return redirect('/login')->with('Success', 'Password berhasil diganti');
+        // // return 123;
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|min:3|confirmed',
+        ]);
 
-        // return redirect('laman_masuk')->with('success', 'Password berhasil direset');
+        $user = ListAkun::where('email', $request->email)->first();
+
+        if (!$user) {
+            return redirect()->back()->withErrors(['email' => 'Email tidak ditemukan']);
+        }
+
+        $user->password = Hash::make($request->password);
+        $user->save();
+
+        return redirect('/login')->with('Success', 'Password berhasil direset');
     }
 
         // $request->validate([

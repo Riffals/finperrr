@@ -8,7 +8,7 @@
     </div>
     <section class="text-gray-600 body-font overflow-hidden">
         <div class="container px-5 py-24 mx-auto">
-          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+          <div class="lg:w-3/5 mx-auto flex flex-wrap">
             <img
               alt="ecommerce"
               class="lg:w-1/2 w-full object-cover object-center"
@@ -76,10 +76,9 @@
         </div>
       </section>
 
-    <div class="bg-[#E88A33]">
+    <div id="bawah">
         <div
-            class="container flex flex-col items-center justify-between p-8  mx-auto space-y-4 sm:space-y-0 sm:flex-row">
-
+            class="container flex flex-col items-center justify-between p-6 mx-auto space-y-4 sm:space-y-6 sm:flex-row">
         </div>
     </div>
     {{-- yodi --}}
@@ -118,6 +117,11 @@
     #tombol{
         font-family: 'Open Sans';
         font-weight: 700;
+    }
+    #bawah{
+        background-color: #E88A33;
+        margin-top: 7%;
+        padding: 6px;
     }
 
     </style>

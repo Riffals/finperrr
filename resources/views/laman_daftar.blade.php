@@ -7,7 +7,7 @@
 </div>
 <section class="text-gray-600 body-font overflow-hidden">
     <div class="container px-5 py-24 mx-auto">
-        <div class="lg:w-4/5 mx-auto flex flex-wrap">
+        <div class="lg:w-3/5 mx-auto flex flex-wrap">
             <img alt="ecommerce" class="lg:w-1/2 w-full object-cover object-center rounded" src="img/logo.jpg" />
             <div class="lg:w-1/2 w-full shadow-2xl lg:py-6 mt-6 lg:mt-0 rounded-2xl">
                 <div class="w-full px-6 py-8 md:px-8">
@@ -88,12 +88,13 @@
     </div>
 
 </section>
-<div class="bg-[#E88A33]">
+<div id="bawah">
     <div
-        class="container flex flex-col items-center justify-between p-6 mx-auto space-y-4 sm:space-y-0 sm:flex-row">
-
+        class="container flex flex-col items-center justify-between p-6 mx-auto space-y-4 sm:space-y-6 sm:flex-row">
     </div>
 </div>
+{{-- <div class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-[#E88A33] text-sm py-8">
+</div> --}}
 
     {{-- yodi --}}
     {{-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
@@ -131,6 +132,11 @@
     #tombol{
         font-family: 'Open Sans';
         font-weight: 700;
+    }
+    #bawah{
+        background-color: #E88A33;
+        margin-top: 7%;
+        padding: 6px;
     }
 
     </style>
