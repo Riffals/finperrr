@@ -6,14 +6,82 @@
 
 @section('content')
 
-@if (isset($errorMessage) && !empty($pelangganList) && $pelangganList->isEmpty())
+@if($errorMessage)
+    <div id="error-popup">
+        <div id="error-message">
+            <div class="image-container">
+                <img src="{{ asset('sad-tear.png') }}" alt="Sad Icon" />
+            </div>
+            <div id="font_size">
+                Mohon maaf
+                <div>pencarian Anda tidak
+                    <div>ditemukan</div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+    <style>
+        #error-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            scale: 1.5;
+            z-index: 99;
+        }
+
+        #error-message {
+            background-color: white;
+            width: 15%;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .image-container {
+            margin-bottom: 10px;
+        }
+
+        .image-container img {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+            scale: 125%;
+        }
+        #font_size{
+            font-family: 'Poppins';
+            font-weight: 600;
+        }
+    </style>
+
     <script>
-        // Menampilkan pesan error dalam pop-up
-        window.onload = function() {
-            alert("{{ $errorMessage }}");
-        };
+        document.addEventListener('DOMContentLoaded', function() {
+            var errorPopup = document.getElementById('error-popup');
+
+            // Delay pengalihan halaman selama 1,5 detik
+            setTimeout(function() {
+                // Arahkan pengguna ke /admin/pelanggan/dashpel
+                window.location.href = '/admin/pelanggan/dashpel';
+            }, 1500);
+        });
     </script>
 @endif
+
+{{-- @if($errorMessage)
+    <script>
+        // Tampilkan pesan kesalahan sebagai popup setelah halaman selesai dimuat
+        window.addEventListener('DOMContentLoaded', (event) => {
+            alert('{{ $errorMessage }}');
+        });
+    </script>
+@endif --}}
 
     {{-- Searbar + filter --}}
     <form action="" method="GET">  
@@ -81,16 +149,19 @@
                     </div>
                 </div>
             </div>
-            <button id="tombolcard" type="button"
-                class="rounded-3xl flex items-center justify-center gap-4 px-4 py-2 bg-sky-800 text-gray-100">
-                Selengkapnya
-                <svg width="16" height="18" viewBox="-1 -1 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.27614 5.69775L10.4922 5.69775" stroke="white" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    <path d="M5.88416 1.22464L10.4922 5.69801L5.88416 10.1714" stroke="white" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </button>
+            
+            <button id="tombolcard" type="button" onclick="window.location.href='{{ url('/admin/pelanggan/detailmitra',$cust->mitraID) }}'"
+            class="rounded-3xl flex items-center justify-center gap-4 px-4 py-2 bg-sky-800 text-gray-100">
+            Selengkapnya
+            <svg width="16" height="18" viewBox="-1 -1 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.27614 5.69775L10.4922 5.69775" stroke="white" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M5.88416 1.22464L10.4922 5.69801L5.88416 10.1714" stroke="white" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+        
+
         </div>
         @endforeach
     </div>

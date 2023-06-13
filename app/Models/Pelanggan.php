@@ -11,7 +11,13 @@ class Pelanggan extends Model
 
     protected $table = 'pelanggans';
     protected $primaryKey = 'pelangganID';
-    public $timestamps = false;
+    // public $timestamps = false;
+
+    protected $fillable = ['pelangganID', 'akunID', 'nama_pelanggan', 'lokasi_pelanggan', 'nomorHP_pelanggan', 'fotoprofil'];
+    // protected $pelanggan = 'pelangganID';
+
+
+
 
     public function akun()
     {

@@ -9,15 +9,16 @@
 
 </head>
 <body>
+    @php
+        // $ppel = auth()->pelanggan();
+        // $ppel = auth()->guard('pelanggan')->user();
+    @endphp
 
-    {{-- nav --}}
-    {{-- <form action="{{url('profil/store')}}" method="post">
-    @csrf --}}
-    {{-- <body className='snippet-body'> --}}
         <nav class="navbar navbar-inverse">
         <div class="navbar-logo">
             <a href="/">
                 <img src="{{ ('/img/logo_finper.png') }}" alt="Logo">
+                {{-- <img src="{{ ($ppel->fotoprofil) }}" alt="Logo"> --}}
             </a>
         </div>
         <div class="navbar-icon">
@@ -35,6 +36,7 @@
                         <p>Kontrak Mitra</p>
                         <span>></span>
                     </a>
+                    {{-- <a href="/admin/pelanggan/profil" class="sub-menu-link"> --}}
                     <a href="/admin/pelanggan/profil" class="sub-menu-link">
                         <img src="{{ ('/img/edit_profil.png') }}" alt="Edit_profil">
                         <p>Edit Profil</p>
@@ -77,7 +79,7 @@
         /* poppins */
         @import url("https://fonts.googleapis.com/css?family=Poppins:400,600,800,500,700");
         body {
-            background: rgb(230, 230, 230, .9)
+            background: #7dacd2
         }
 
         .navbar {
